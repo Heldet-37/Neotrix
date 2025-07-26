@@ -39,9 +39,9 @@ const clientes = [
 
 export default function Portfolio() {
   return (
-    <div className="max-w-3xl mx-auto animate-fade-in">
+    <div className="max-w-5xl mx-auto animate-fade-in px-4 py-8">
       <h2 className="text-3xl font-bold mb-4 text-blue-400 flex items-center gap-2"><FaCode /> Portfólio</h2>
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projetos.map((proj, idx) => (
           <div key={idx} className="bg-slate-800 rounded-lg p-4 shadow hover:scale-105 transition-transform flex flex-col gap-2">
             <h3 className="text-xl font-semibold mb-1 flex items-center gap-2 text-blue-300"><FaCheckCircle /> {proj.nome}</h3>
@@ -52,7 +52,7 @@ export default function Portfolio() {
       </div>
       <div className="mt-12">
         <h3 className="text-2xl font-bold mb-4 text-blue-400 flex items-center gap-2"><FaUser /> Clientes</h3>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {clientes.map((cli, idx) => (
             <div key={idx} className="bg-slate-800 rounded-lg p-4 shadow flex flex-col gap-1">
               <span className="font-semibold text-white">{cli.nome}</span>

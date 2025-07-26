@@ -14,15 +14,15 @@ const servicos = [
 
 export default function Services() {
   return (
-    <div className="max-w-2xl mx-auto animate-fade-in">
-      <h2 className="text-3xl font-bold mb-4 text-blue-400">Serviços</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="max-w-4xl mx-auto animate-fade-in px-4 py-8">
+      <h2 className="text-3xl font-bold mb-4 text-blue-400 text-center">Serviços</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {servicos.map((s, i) => (
           <div key={i} className="flex items-center gap-4 bg-slate-800 rounded-lg p-4 shadow hover:scale-105 transition-transform">
-            <div className="text-blue-400">{s.icon}</div>
+            <div className="text-blue-400 text-2xl sm:text-3xl">{s.icon}</div>
             <div>
-              <div className="font-semibold">{s.titulo}</div>
-              <div className="text-sm text-slate-400">{s.desc}</div>
+              <div className="font-semibold text-base sm:text-lg">{s.titulo}</div>
+              <div className="text-sm sm:text-base text-slate-400">{s.desc}</div>
             </div>
           </div>
         ))}
